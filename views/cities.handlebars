@@ -2,226 +2,27 @@
 
 <div class="wrap">
     {{#unless logged_in}}
-<h3>Please login or register above to receive more information for each city. </h3>
+<h3>Please login or register above to receive more information about volunteering. </h3>
 
 
     {{/unless}}
 </div>
     {{#if logged_in}}
 
-<div class="blog">
-                <div class="destination-head">
-                    <div class="container">
-                        <h3>Paris: Here's Your Guide</h3>
-                    </div>
+<div id="searchresults">
+    <h1>Volunteer Position</h><br>
+    <h3>Company</h3>
+    <h3>Location</h><br>
+    <h3>Positions Available:
+    <p>
+    <h5>Description...</h5>
+    </p>
 
-                </div>
-                <div class="blog-grids">
-                    <div class="container">
-
-                        <div class="row">
-
-
-                            <div class=" col-sm-6 col-xs-12">
-                                <div class="blog-poast-head">
-                                    <div class="blog-art-pic">
-                                        <a class="post-pic" href="#"> <img src="/assets/images/hostelparis.jpg" title="poast-name" /></a>
-                                    </div>
-                                </div>
-                                <div class="blog-info">
-                                    <h3><a href="#">Hostels in Paris</a></h3>
-                                    <p>Find out some suggested hostels in Paris.</p>
-                                    <a class="btn" data-toggle="modal" data-target="#hostels">Details</a>
-                                </div>
-                            </div>
-
-
-                            <div class=" col-sm-6 col-xs-12">
-                                <div class="blog-poast-head">
-                                    <div class="blog-art-pic">
-                                        <a class="post-pic" href="#"> <img src="/assets/images/hotelparis.jpg" title="poast-name" /></a>
-                                    </div>
-                                </div>
-                                <div class="blog-info">
-                                    <h3><a href="#">Hotels in Paris</a></h3>
-                                    <p>Find out some suggested hotels in Paris.</p>
-                                    <a class="btn" data-toggle="modal" data-target="#hotels">Details</a>
-                                </div>
-                            </div>
-
-
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="blog-poast-head">
-                                    <div class="blog-art-pic">
-                                        <a class="post-pic" href="#"> <img src="/assets/images/topparis.jpg" title="poast-name" /></a>
-                                    </div>
-                                </div>
-                                <div class="blog-info">
-                                    <h3><a href="#">Things to do in Paris</a></h3>
-                                    <p>Find out some things to do in Paris.</p>
-                                    <a class="btn" data-toggle="modal" data-target="#topPlacess">DeTails</a>
-                                </div>
-                            </div>
-
-
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="blog-poast-head">
-                                    <div class="blog-art-pic">
-                                        <a class="post-pic" href="#"> <img src="/assets/images/tourparis.jpg" title="poast-name" /></a>
-                                    </div>
-                                </div>
-                                <div class="blog-info">
-                                    <h3><a href="#">Tours in Paris</a></h3>
-                                    <p>Find out some tours in Paris.</p>
-                                    <a class="btn" data-toggle="modal" data-target="#paidtours">DeTails</a>
-                                </div>
-                            </div>
-
-
-
-
-
-                        </div>
-
-                    </div>
-                </div>
-
-
-
-
-
-
+<input class="details"type="submit" name="Details" value="Details">
 </div>
 
 {{/if}}
-    <!-- Modal Help -->
-    <div id="hostels" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-        <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title whtText">Hostels</h4>
-                </div>
-                <div class="modal-body">
-                    <table class="hosteltable">
-                        <tr>
-                            <th><b>Image</b></th>
-                            <th><b>Name</b></th>
-                            <th><b>Price (USD)</b></th>
-                            <th><b>Rating</b></th>
-                        </tr>
-                        {{#each hostelData}}
-                            <tr>
-                                <td><img src="{{this.image}}" alt="hostelimage"></td>
-                                <td><a href="{{this.url}}">{{this.hostel}}</a></td>
-                                <td>${{this.USDPrice}}</td>
-                                <td>{{this.rating}}</td>
-                            </tr>
-                        {{/each}}
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{!-- hotel information --}}
 
-    <div id="hotels" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-        <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title whtText">Hotels</h4>
-            </div>
-            <div class="modal-body">
-                <table class="hosteltable">
-                    <tr>
-                        <th><b>Image</b></th>
-                        <th><b>Name</b></th>
-                        <th><b>Price (USD)</b></th>
-                        <th><b>Rating</b></th>
-                    </tr>
-                    {{#each hotelData}}
-                        <tr>
-                            <td><img src="http://vignette3.wikia.nocookie.net/spore/images/6/6c/Question-mark.png/revision/latest?cb=20110427230528" alt="questionmark"></td>
-                            <td><a href="{{this.Url}}">{{this.Name}}</a></td>
-                            <td>${{this.Price}}</td>
-                            <td>{{this.Rating}}</td>
-                        </tr>
-                    {{/each}}
-                </table>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    {{!-- topPlacess information --}}
-
-    <div id="topPlacess" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-        <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title whtText">Things to Do</h4>
-            </div>
-            <div class="modal-body">
-                <table class="hosteltable">
-                    <tr>
-
-                        <th><b>Name</b></th>
-
-                    </tr>
-                    {{#each topPlacesData}}
-                        <tr>
-                            <td><a href="javascript:window.open('https://www.google.fr/maps/place/{{this.nameofplaces}}','mywindowtitle','width=750,height=550')">{{this.nameofplaces}}</a></td>
-                        {{!--   <td><a href="https://www.google.com/maps/place/{{this.nameofplaces}};output=embed" target="mapScreen">{{this.nameofplaces}}</a></td> --}}
-
-
-                        </tr>
-                    {{/each}}
-                </table>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    {{!-- Paid Tours information --}}
-
-    <div id="paidtours" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-        <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title whtText">Paid Tours</h4>
-                </div>
-                <div class="modal-body">
-                    <table class="hosteltable">
-                        <tr>
-                            <th><b>Image</b></th>
-                            <th><b>Name</b></th>
-                            <th><b>Abstract</b></th>
-                            <th><b>Price (USD)</b></th>
-                        </tr>
-                        {{#each paidToursData}}
-                            <tr>
-                                <td><img src="{{this.Image}}" alt="paidtoursimage"></td>
-                                <td><a href="{{this.Url}}" target="_blank">{{this.Title}}</a></td>
-                                <td>{{this.Abstract}}</td>
-                                <td>${{this.Price}}</td>
-                            </tr>
-                        {{/each}}
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 

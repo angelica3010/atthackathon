@@ -11,7 +11,7 @@ if(process.env.JAWSDB_URL) {
         host: 'localhost',
         user: 'root',
         password: '',
-        database: 'travelfernweh_db'
+        database: 'unteer_db'
     });
     console.log('connected to local database');
 }
