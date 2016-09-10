@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang = "en-US">
+    <head>
+        <title>Volun</title>
+{{!--         <link href="/assets/css/style.css" rel='stylesheet' type='text/css' />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/assets/css/jquery.bxslider.css" type="text/css" />
+ --}}
+    </head>
+    <body>
+        <!---start-wrap--->
+
+        <!-- -start-top-header-> -->
+            <div class="top-header" id="header">
+                <div class="wrap">
+                    <div class="top-header-left">
+                        <ul>
+                        {{#unless logged_in}}
+                            <li><a href="/users/sign-in" ><span> </span> Members Login</a></li>
+                            <li><p><span> </span>Not a Member ? </p>&nbsp;<a class="reg" href="/users/new"> Register</a></li>
+                        {{/unless}}
+                            {{#if logged_in}}
+                            <li><p><span> </span>Welcome </p>&nbsp;</li>
+                            <li><p><span> </span>Members </p>&nbsp; <a class="reg" href="/users/sign-out" > Sign Out</a></li>
+                            {{/if}}
+                            <li id="contactinfo"><p class="contact-info">Call Us Now :888-888-8888</p></li>
+                            <div class="clear"> </div>
+                        </ul>
+                    </div>
+
+
+                    <div class="clear"> </div>
+                </div>
+            <div id="loginBox">
+
+            </div>
+
+            </div>
+
+            <!---//End-top-header--->
+            <!---start-header-->
+
+        {{{ body }}}
+
+
+
+        <!---//End-footer--->
+        <!---start-subfooter--->
+
+
+    </body>
+</html>
+
